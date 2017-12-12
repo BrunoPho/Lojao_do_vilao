@@ -23,11 +23,15 @@
 
     <div class="form-group">
         <label for="Categoria">Categoria</label>
+
         <select name="categoria" class="form-control" id="Categoria">
-            <option>Fruta</option>
-            <option>Legume</option>
-            <option>Hortaliça</option>
+
+            <option>Armas</option>
+            <option>Roupas</option>
+            <option>Acessarios</option>
+
         </select>
+        
     </div>
 
     <button type="submit" class="btn btn-primary">Cadastrar</button>

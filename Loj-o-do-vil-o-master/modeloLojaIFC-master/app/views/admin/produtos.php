@@ -13,11 +13,12 @@
 <div class="row">
     <div class="col-md-12">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="digite o nome do produto" aria-describedby="basic-addon2">
+            <input type="text" class="form-control" placeholder="Digite o nome do produto" aria-describedby="basic-addon2">
             <button class="input-group-addon" id="basic-addon2">buscar</button>
         </div>
     </div>
 </div>
+
 <br>
 
 <table class="table table-bordered">
@@ -35,10 +36,10 @@
     <?php foreach ($listaProdutos as $produto): ?>
     <tr>
         <th scope="row"><?= $produto->codigo?></th>
-        <td><?=$produto->nome?></td>
-        <td><?=$produto->preco?></td>
-        <td><?=$produto->estoque?></td>
-        <td><?=$produto->categoria?></td>
+        <td><?=$produto->nome      ?></td>
+        <td><?=$produto->preco     ?></td>
+        <td><?=$produto->estoque   ?></td>
+        <td><?=$produto->categoria ?></td>
         <td>
               <a href="editar-produto.php?id=<?= $produto->codigo?>">editar</a>
             | <a href="../../controllers/controladorProduto.php?acao=excluir&id=<?= $produto->codigo?>">remover</a>

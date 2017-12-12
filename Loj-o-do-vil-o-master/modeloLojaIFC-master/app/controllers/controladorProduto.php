@@ -9,8 +9,8 @@ require_once "../models/CrudProdutos.php";
 //quando um valor da URL for igual a cadastrar faça isso
 if ( $_GET['acao'] == 'cadastrar'){
 
-    $produto = new Produto($_POST['nome'],$_POST['preco'],$_POST['categoria'],$_POST['estoque']);
     //crie um objeto $crud
+    $produto = new Produto($_POST['nome'],$_POST['preco'],$_POST['categoria'],$_POST['estoque']);
 
     $crud = new CrudProdutos();
 
@@ -23,13 +23,23 @@ if ( $_GET['acao'] == 'cadastrar'){
 //quando um valor da URL for igual a editar faça isso
 if ( $_GET['acao'] == 'editar'){
 
+    $nome       = $_POST['nome'];
+    $preco      = $_POST['preco'];
+    $categoria  = $_POST['categoria'];
+    $estoque    = $_POST['estoque'];
+    $codigo     = $_POST['codigo'];
+    
     //$produto = new Produto($_POST);
+    $crud = new CrudProdutos();
+    $crud->editar($codigo, $nome, $categoria, $preco, $estoque);
+
 
     //$crud = new CrudProdutos();
     //$crud->editar($id);
     //algoritmo para editar
+
     //redirecione para a página de produtos
-    header('location:../viewn/admin/produtos.php');
+    header('location:../views/admin/produtos.php');
 }
 
 //quando um valor da URL for igual a excluir faça isso
@@ -43,4 +53,10 @@ if ( $_GET['acao'] == 'excluir'){
     $crud->excluirProduto($_GET['id']);
 
     header('location:../views/admin/produtos.php');
+}
+
+if ($_GET['action'] == 'comprar'){
+    $crud = new CrudProdutos();
+    $msg = $crud->comprar($_POST['codigo'], $_POST['estoque']);
+    header("location: ../views/produto.php?codigo=$_POST[codigo]&msg=$msg");
 }

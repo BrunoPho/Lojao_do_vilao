@@ -13,7 +13,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 
@@ -42,13 +42,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#Início">Início</a>
+                    <a class="nav-link" href="#Início">  Início  </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Sobre">Sobre</a>
+                    <a class="nav-link" href="#Sobre">   Sobre   </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Contato">Contato</a>
+                    <a class="nav-link" href="#Contato"> Contato </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../">   Voltar  </a>
                 </li>
             </ul>
         </div>
